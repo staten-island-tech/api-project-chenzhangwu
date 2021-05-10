@@ -1,0 +1,17 @@
+$phone: 767px;
+$tablet: 991px;
+$laptop: 1199px;
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$colors: ();
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

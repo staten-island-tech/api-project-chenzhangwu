@@ -1,5 +1,3 @@
-const DOMSelectors = {
-  grid: document.querySelector(".movie-grid"),
-};
+const DOMSelectors = {};
 
 export { DOMSelectors };
