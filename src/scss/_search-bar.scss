@@ -1,0 +1,9 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.srch-bar {
+  background-color: color(header-dark);
+  height: 30vh;
+  width: auto;
+  position: relative;
+}
