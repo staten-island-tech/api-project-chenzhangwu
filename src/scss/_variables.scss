@@ -10,7 +10,11 @@ body {
   box-sizing: border-box;
 }
 
-$colors: ();
+$colors: (
+  white: #fff,
+  header-light: #595858,
+  body-dark: #2e2d2d,
+);
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
