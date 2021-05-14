@@ -6,7 +6,15 @@ const query = async function () {
       "https://api.spacexdata.com/v4/launches/upcoming"
     );
     const launchData = await response.json();
-    console.log(launchData);
+    launchData.forEach((launch) => {
+      DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class="launch-item">
+        <h3 class="launch-name">${launch.name}</h3>
+        <h3 class="launch-time">${launch.date_utc}</h3>
+      </div>`
+      );
+    });
   } catch (error) {
     console.log(error);
     alert("Great Error Handling :D - An error as occured!");
