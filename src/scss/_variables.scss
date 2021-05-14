@@ -2,20 +2,23 @@ $phone: 767px;
 $tablet: 991px;
 $laptop: 1199px;
 
-html,
-body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+// Color Scheme #12: https://visme.co/blog/website-color-schemes/
 
 $colors: (
-  white: #fff,
-  header-light: #595858,
-  body-dark: #2e2d2d,
+  deep-black: #0c0032,
+  dark-gray: #1f2833,
+  light-gray: #c5c6c7,
+  cyan: #66fcf1,
+  teal: #45a29e,
+  white: #ffffff,
 );
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
+}
+
+// Google Fonts: https://fonts.google.com/specimen/Rubik?preview.size=52&preview.text=SpaceX%20Data&preview.text_type=custom
+
+@mixin rubik {
+  font-family: "Rubik", sans-serif;
 }
