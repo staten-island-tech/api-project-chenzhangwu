@@ -1,0 +1,16 @@
+{
+    "query": {
+       "$text": {
+         "$search": "2"
+       }
+     },
+     "options": {
+       "sort":{
+           "flight_number":"asc"
+       },
+       "limit": 50,
+       "populate": [
+           "rocket"
+       ]
+    }
+}

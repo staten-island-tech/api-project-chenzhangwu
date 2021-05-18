@@ -21,7 +21,43 @@ body {
   width: 90vw;
   background-color: white;
   margin: 4rem auto;
-  padding: 3rem auto;
+  padding: 1rem;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 5rem;
+  min-width: 40rem;
+  box-shadow: 0 0 1rem color(light-gray);
+}
+
+.table thead tr {
+  background-color: color(teal);
+  color: color(white);
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.table tbody tr {
+  border-bottom: 0.1rem solid #dddddd;
+}
+
+.table tbody tr:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 0.2rem solid #009879;
+}
+
+.table img {
+  width: 6rem;
 }
 
 .launch-item {
