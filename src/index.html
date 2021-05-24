@@ -15,29 +15,48 @@
           <h1 class="header-text">SpaceX Launches</h1>
         </div>
         <ul class="nav-bar">
-          <li>
-            <a href="#" class="nav-link">Launches</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Crew</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Rockets</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Capsules</a>
-          </li>
+          <li><a href="#" class="nav-link">Launches</a></li>
+          <li><a href="#" class="nav-link">Crew</a></li>
+          <li><a href="#" class="nav-link">Rockets</a></li>
+          <li><a href="#" class="nav-link">Capsules</a></li>
         </ul>
       </div>
     </div>
-    <!--Search Bar Section-->
-    <!--<h1 class="srch-bar"></h1>-->
-    <!--Holds the Cards (Products)-->
+    <form id="search-bar" class="search-bar">
+      <input type="text" class="submit-area" placeholder="'Starlink'">
+      <input type="submit" class="submit-button" value="Search">
+    </form>
     <section class="container">
-      <!-- <div class="launch-item">
-        <h3 class="launch-name">Starlink-26 (v1.0)</h3>
-        <h3 class="launch-time">2021-05-15T22:54:00.000Z</h3>
-      </div> -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Patch</th>
+            <th>Mission #</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time (EST)</th>
+            <th>Rocket</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr>
+            <td><img src="https://imgur.com/BrW201S.png" alt="Patch"></td>
+            <td>1</td>
+            <td>Starlink-28 (v1.0)</td>
+            <td>May 5, 2021</td>
+            <td>08:30</td>
+            <td>Falcon 9</td>
+          </tr>
+          <tr>
+            <td><img src="https://imgur.com/BrW201S.png" alt="Patch"></td>
+            <td>2</td>
+            <td>Starlink-28 (v1.0)</td>
+            <td>May 5, 2021</td>
+            <td>08:30</td>
+            <td>Falcon 9</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <script src="js/index.js"></script>
   </body>

@@ -1,9 +1,46 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-.srch-bar {
-  background-color: color(dark-gray);
-  height: 30vh;
+.search-bar {
+  height: 5rem;
   width: auto;
   position: relative;
+  @include flex-row-center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.search-bar input {
+  height: 70%;
+  margin: 0rem 0.5rem;
+  font-size: 2rem;
+}
+
+.submit-area {
+  width: 35vw;
+  padding: 0rem 1rem 0rem 2.5rem;
+
+  // Format Magnifying Glass Icon
+  background-image: url(../img/search-icon.png);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 0.5rem center;
+}
+
+.submit-area:focus {
+  border: 0.2rem solid color(cyan);
+}
+
+.submit-button {
+  min-width: 8vw;
+  background: none;
+  transition: all 0.3s;
+  color: color(light-gray);
+  border: 0.3rem double color(light-gray);
+}
+
+.submit-button:hover {
+  color: color(deep-black);
+  background-color: color(light-gray);
+  border-color: color(deep-black);
 }

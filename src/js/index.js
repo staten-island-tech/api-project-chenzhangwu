@@ -1,15 +1,5 @@
 import { DOMSelectors } from "./DOM";
+import { postData, launchData, defaultData } from "./Functions";
+import {} from "./Search.js";
 
-const query = async function () {
-  try {
-    const response = await fetch(
-      "https://api.spacexdata.com/v4/launches/upcoming"
-    );
-    const launchData = await response.json();
-    console.log(launchData);
-  } catch (error) {
-    console.log(error);
-    alert("Great Error Handling :D - An error as occured!");
-  }
-};
-query();
+defaultData();
