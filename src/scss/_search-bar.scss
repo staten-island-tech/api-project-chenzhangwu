@@ -14,17 +14,19 @@
   height: 70%;
   margin: 0rem 0.5rem;
   font-size: 2rem;
+  @include oswald;
 }
 
 .submit-area {
   width: 35vw;
-  padding: 0rem 1rem 0rem 2.5rem;
+  padding: 0rem 1rem 0rem 3.2rem;
+  border-radius: 1rem;
 
   // Format Magnifying Glass Icon
   background-image: url(../img/search-icon.png);
-  background-size: 1.5rem;
+  background-size: 1.7rem;
   background-repeat: no-repeat;
-  background-position: 0.5rem center;
+  background-position: 0.8rem center;
 }
 
 .submit-area:focus {
@@ -32,7 +34,8 @@
 }
 
 .submit-button {
-  min-width: 8vw;
+  width: 8vw;
+  max-width: 20rem;
   background: none;
   transition: all 0.3s;
   color: color(light-gray);

@@ -21,5 +21,13 @@ $colors: (
 // Google Fonts: https://fonts.google.com/specimen/Rubik?preview.size=52&preview.text=SpaceX%20Data&preview.text_type=custom
 
 @mixin rubik {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+@mixin oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+@mixin roboto-mono {
+  font-family: "Roboto Mono", monospace;
 }
