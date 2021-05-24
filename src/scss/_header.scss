@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import '_variables.scss';
+@import '_mixins.scss';
 
 .header {
   width: 100%;
@@ -39,11 +39,23 @@
   padding: 0rem 2rem;
 }
 
-.nav-link,
+.nav-link {
+  color: color(light-gray);
+  @include rubik;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+nav ul li a:hover {
+  font-weight: bolder;
+  color: color(white);
+}
+
+/* .nav-link,
 .nav-link:visited,
 .nav-link:link {
   color: color(light-gray);
   @include rubik;
   font-weight: 400;
   font-size: 1.7rem;
-}
+} */
