@@ -19,6 +19,7 @@
 
 .submit-area {
   width: 35vw;
+  min-width: 62rem;
   padding: 0rem 1rem 0rem 3.2rem;
   border-radius: 1rem;
 
@@ -35,6 +36,7 @@
 
 .submit-button {
   width: 8vw;
+  min-width: 7rem;
   max-width: 20rem;
   background: none;
   transition: all 0.3s;
@@ -46,4 +48,17 @@
   color: color(deep-black);
   background-color: color(light-gray);
   border-color: color(deep-black);
+}
+
+@include tablet {
+  .submit-area {
+    width: 75vw;
+    min-width: 0;
+  }
+}
+
+@include phone {
+  .search-bar input {
+    font-size: 1.5rem;
+  }
 }

@@ -75,8 +75,7 @@ const defaultData = function () {
       sort: {
         flight_number: "asc",
       },
-      limit: 300,
-      page: 1,
+      pagination: false,
       populate: ["rocket"],
     },
   });

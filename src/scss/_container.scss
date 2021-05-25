@@ -40,6 +40,10 @@
   border-bottom: 0.2rem solid #009879;
 }
 
+.table tbody tr:hover {
+  background-color: color(cyan);
+}
+
 .table img {
   width: 6rem;
 }
