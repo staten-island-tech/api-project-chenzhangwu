@@ -1,4 +1,4 @@
-@import "_variables.scss";
+@import '_variables.scss';
 
 @mixin flex-col-center {
   display: flex;
@@ -20,6 +20,12 @@
   flex-direction: row-reverse;
   align-items: center;
 }
+@mixin just-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin laptop {
   @media screen and (max-width: $laptop) {
     @content;
