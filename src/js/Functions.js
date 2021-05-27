@@ -46,6 +46,7 @@ const launchData = function (data = {}) {
           <td>${dateFormatter(launch.date_utc)}</td>
           <td>${timeFormatter(launch.date_utc)}</td>
           <td>${launch.rocket.name}</td>
+          <td class="launchID">${launch.id}</td>
           </tr>`
       );
     });

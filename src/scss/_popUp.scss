@@ -1,33 +1,80 @@
-@import '_variables.scss';
-@import '_mixins.scss';
+@import "_variables.scss";
+@import "_mixins.scss";
 
 .popUp {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
   @include just-align-center;
 }
 
-.popUp-content {
-  width: 500px;
-  height: 300px;
+.popUp-box {
+  width: 75vw;
+  height: 75vh;
   background-color: white;
-  border-radius: 4px;
-  text-align: center;
-  padding: 20px;
+  border-radius: 0.5rem;
   position: relative;
-  display: none;
+  padding: 2rem;
 }
 
 .close {
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor: pointer; 
-
+  position: absolute;
+  top: 0;
+  right: 1.4rem;
+  font-size: 4rem;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
+.popUp-content-box {
+  width: 100%;
+  height: 100%;
+  @include flex-row-center;
+}
+
+// POP-UP LEFT
+
+.popUp-left {
+  width: 50%;
+  height: 100%;
+}
+
+.popUp-textbox {
+  padding-bottom: 4rem;
+}
+
+.popUp-text {
+  @include oswald;
+  font-size: 3rem;
+  padding-left: 2rem;
+}
+
+.popUp-text-label {
+  @include oswald;
+  font-size: 3rem;
+}
+
+.popUp-icon-row {
+  width: 100%;
+  @include flex-row-center;
+  justify-content: space-evenly;
+}
+
+.popUp-icons {
+  width: 4rem;
+}
+
+// POP-UP RIGHT
+
+.popUp-right {
+  width: 50%;
+  height: 100%;
+  @include flex-col-center;
+  justify-content: space-evenly;
+}
+
+.popUp-right img {
+  max-width: 90%;
+}
