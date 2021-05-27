@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import '_variables.scss';
+@import '_mixins.scss';
 
 .popUp {
   width: 100%;
@@ -11,10 +11,10 @@
 }
 
 .popUp-box {
-  width: 75vw;
-  height: 75vh;
-  background-color: white;
-  border-radius: 0.5rem;
+  width: 60vw;
+  height: 60vh;
+  background-color: color(soft-white);
+  border-radius: 2rem;
   position: relative;
   padding: 2rem;
 }
@@ -39,6 +39,7 @@
 .popUp-left {
   width: 50%;
   height: 100%;
+  padding: 1rem 0 0 2rem;
 }
 
 .popUp-textbox {
@@ -58,6 +59,7 @@
 
 .popUp-icon-row {
   width: 100%;
+  padding-top: 2rem;
   @include flex-row-center;
   justify-content: space-evenly;
 }
@@ -77,4 +79,51 @@
 
 .popUp-right img {
   max-width: 90%;
+  box-shadow: 0rem 0rem 3.5rem 0.75rem color(dark-gray);
+}
+
+@include laptop {
+  .popUp-text-label {
+    font-size: 2.5rem;
+  }
+  .popUp-text {
+    font-size: 2.5rem;
+  }
+  .popUp-icon-row {
+    padding-top: 0;
+  }
+}
+
+@include tablet {
+  .popUp-icon-row {
+    padding-top: 3rem;
+  }
+  .popUp-text {
+    font-size: 2.5rem;
+  }
+  .popUp-text-label {
+    font-size: 2.5rem;
+  }
+  .popUp-box {
+    height: 57.5vh;
+    width: 57.5vw;
+  }
+  .popUp-content-box {
+    padding-top: 2rem;
+  }
+}
+
+@include phone {
+  .popUp-text {
+    font-size: 2rem;
+  }
+  .popUp-text-label {
+    font-size: 2rem;
+  }
+  .popUp-icon-row {
+    padding: 0;
+  }
+  .popUp-icons {
+    width: 3.5rem;
+  }
 }
