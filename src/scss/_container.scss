@@ -65,3 +65,10 @@
 .launchID {
   display: none;
 }
+
+.alert {
+  @include roboto-mono;
+  text-align: center;
+  color: color(white);
+  font-size: 1rem;
+}
