@@ -55,7 +55,6 @@ const launchData = function (data = {}) {
 
 const popUpData = function (id = "") {
   DOMSelectors.popUpContent.style.display = "flex";
-
   // Data to attach to post request
   const data = {
     query: {
@@ -102,7 +101,7 @@ const popUpData = function (id = "") {
           <a href="${launch.links.wikipedia}">
             <img class="popUp-icons" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg" alt="wikipedia">
           </a>
-          <a href="${launch.links.youtube}">
+          <a href="${launch.links.webcast}">
             <img class="popUp-icons" src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Almost-Black-Logo.wine.svg" alt="youtube">
           </a>
         </div>
