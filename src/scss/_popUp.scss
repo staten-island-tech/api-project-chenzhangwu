@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   @include just-align-center;
+  display: none;
 }
 
 .popUp-box {

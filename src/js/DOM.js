@@ -4,7 +4,6 @@ const DOMSelectors = {
   submitArea: document.querySelector(".submit-area"),
   searchForm: document.querySelector(".search-bar"),
   popUpContent: document.querySelector(".popUp"),
-  closeButton: document.querySelector(".close"),
 };
 
 export { DOMSelectors };

@@ -53,6 +53,81 @@ const launchData = function (data = {}) {
   });
 };
 
+const popUpData = function (id = "") {
+  DOMSelectors.popUpContent.style.display = "flex";
+
+  // Data to attach to post request
+  const data = {
+    query: {
+      _id: id,
+    },
+    options: {
+      sort: {
+        flight_number: "asc",
+      },
+      pagination: false,
+      populate: ["rocket", "launchpad", "payloads"],
+    },
+  };
+
+  postData("https://api.spacexdata.com/v4/launches/query", data).then(function (
+    response
+  ) {
+    const launch = response.docs[0];
+    console.log(launch);
+    DOMSelectors.popUpContent.insertAdjacentHTML(
+      "afterbegin",
+      `
+      <div class="popUp-box">
+    <div class="close"> + </div>
+    <div class="popUp-content-box">
+      <div class="popUp-left">
+        <div class="popUp-textbox">
+          <div class="popUp-text-label">Mission Name:</div>
+          <div class="popUp-text">${launch.name}</div>
+        </div>
+        <div class="popUp-textbox">
+          <div class="popUp-text-label">Launch Time (EST):</div>
+          <div class="popUp-text">${dateFormatter(launch.date_utc)}</div>
+          <div class="popUp-text">${timeFormatter(launch.date_utc)}</div>
+        </div>
+        <div class="popUp-textbox">
+          <div class="popUp-text-label">Launch Location:</div>
+          <div class="popUp-text">${launch.launchpad.full_name}</div>
+        </div>
+        <div class="popUp-icon-row">
+          <a href="${launch.links.article}">
+            <img class="popUp-icons" src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-office/100/office-05-512.png" alt="article">
+          </a>
+          <a href="${launch.links.wikipedia}">
+            <img class="popUp-icons" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg" alt="wikipedia">
+          </a>
+          <a href="${launch.links.youtube}">
+            <img class="popUp-icons" src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Almost-Black-Logo.wine.svg" alt="youtube">
+          </a>
+        </div>
+      </div>
+      <div class="popUp-right">
+        <img src="${launch.rocket.flickr_images[0]}" alt="${
+        launch.rocket.name
+      } Rocket">
+        <div class="popUp-text">${launch.rocket.name}</div>
+      </div>
+    </div>
+  </div>`
+    );
+    listenForClose();
+  });
+};
+
+const listenForClose = function () {
+  // Cannot use DOMSelectors because I need to query select everytime this function runs
+  document.querySelector(".close").addEventListener("click", function () {
+    DOMSelectors.popUpContent.innerHTML = "";
+    DOMSelectors.popUpContent.style.display = "none";
+  });
+};
+
 // Formats the ISO-8601 date -> Month Day, Year
 const dateFormatter = function (ISO_8601_date) {
   return new Date(ISO_8601_date).toLocaleDateString(undefined, {
@@ -82,4 +157,4 @@ const defaultData = function () {
   });
 };
 
-export { postData, launchData, defaultData };
+export { postData, launchData, popUpData, defaultData };
