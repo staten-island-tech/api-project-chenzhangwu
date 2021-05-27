@@ -30,6 +30,7 @@
   border-bottom: 0.1rem solid #dddddd;
   background-color: color(white);
   @include oswald;
+  cursor: pointer;
 }
 
 .table tbody tr:nth-last-of-type(even) {
